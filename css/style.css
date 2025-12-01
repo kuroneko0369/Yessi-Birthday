@@ -1,0 +1,174 @@
+body {
+  width: 90%;
+  max-width: 1200px;
+  font-family: "Segoe UI", Sans-Serif;
+  background: url('../assets/bg.jpg') no-repeat center center;
+  line-height: 1.6;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  overflow-x: 0;
+}
+
+.overlay {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.doverlay {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.overlay:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.overlay .thumb img {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.hero {
+  background-color: #ffffffdd;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+}
+
+.heroQ {
+  background-color: #ffffffdd;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  max-height: 300px;
+}
+
+.hero button {
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  background-color: #6ad06a;
+  cursor: pointer;
+  color: #ffffffdd;
+}
+
+.heroQ h1 {
+  font-size: 2rem;
+  color: #0085fa;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: #0085fa;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+}
+
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease;
+  opacity: 0.9;
+}
+
+.slide {
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.slide img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  background-size: cover;
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #545454;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #80f0ff;
+  transform: scale(1.2);
+}
+
+.fade-title {
+  text-align: center;
+  color: #0085fa;
+  font-size: 2.4rem;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in halaman */
+.fade-page {
+  animation: fadeInPage 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
